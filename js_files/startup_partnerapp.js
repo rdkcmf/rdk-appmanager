@@ -44,6 +44,8 @@ px.import({
     var rowcontainer;
     var controlBarScene;
     var controlBar;
+    var currentRow;
+    var select;
 
     launchPage();
 
@@ -52,6 +54,7 @@ px.import({
         {
             console.log("Exit key pressed. Destroying and re-launching Menu");
             destroyApps();
+            currentRow = 0;
             launchPage();
         }
         else if (e.keyCode == keys.M && keys.is_CTRL( e.flags ))
@@ -89,6 +92,8 @@ px.import({
 	rowcontainer.remove();
 	scrollContent.removeAll();
 	scrollContent.remove();
+	select.removeAll();
+	select.remove();
 	scroll.removeAll();
 	scroll.remove();
 	menuBg.removeAll();
@@ -481,7 +486,7 @@ px.import({
         ControlBar.prototype.suspendApplication = function() {
            var applicationName = apps[currentRow].displayName;
            if (launchedApps[applicationName] != undefined) {
-               var appStatus = optimus.getApplicationById(launchedApps[applicationName]).state;
+               var appStatus = optimus.getApplicationById(launchedApps[applicationName]).state();
 
                if (appStatus === "RUNNING")
                {
@@ -519,7 +524,7 @@ px.import({
        var insets = {l: 10, r: 10, t: 10, b: 10};
        controlBar = new ControlBar(0, 0, 360, 60, controlBarScene);
 
-        var select = scene.create({
+       select = scene.create({
             t: "rect",
             parent: scrollContent,
             fillColor: 0x000000,
@@ -534,7 +539,7 @@ px.import({
             return Math.min(Math.max(min, v), max);
         }
 
-        var currentRow = 0;
+        currentRow = 0;
         var currentControl = 0;
 
         function selectRow(i) {
@@ -640,8 +645,6 @@ px.import({
         function scrollDn() {
             var numRows = rowcontainer.numChildren;
             currentControl = 0;
-            //console.log("numRows", numRows);
-            //console.log(currentRow);
             selectRow(clamp(currentRow + 1, 0, numRows - 1));
             updateControlButton();
         }
