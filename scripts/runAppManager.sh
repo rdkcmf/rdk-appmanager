@@ -78,6 +78,19 @@ cleanupProcess()
 #  /lib/rdk/runWesteros.sh & 
 #fi
 
+spark_exec()
+{
+    local executable=""
+
+    if [ -x ./Spark ]; then
+        executable=./Spark
+    elif [ -x ./pxscene ]; then
+        executable=./pxscene
+    fi
+
+    ${executable} "$@"
+}
+
 export ENABLE_XRE_WAYLAND=1
 
 cd /home/root
@@ -129,15 +142,15 @@ fi
 while :
 do
   if [ -f /opt/appmanager_start.js ]; then
-    ./pxscene file:///home/root/appmanager.js?baseApp=file:///opt/appmanager_start.js
+    spark_exec file:///home/root/appmanager.js?baseApp=file:///opt/appmanager_start.js
   else
     if [ -f appmanager_partnerapp.js ]; then
-      ./pxscene file%3A%2F%2F%2Fhome%2Froot%2Fappmanager.js%3FhandleMenuKey%3Dtrue%26baseApp%3Dfile%3A%2F%2F%2Fhome%2Froot%2Fappmanager_partnerapp.js$partnerAppArguments
+      spark_exec file%3A%2F%2F%2Fhome%2Froot%2Fappmanager.js%3FhandleMenuKey%3Dtrue%26baseApp%3Dfile%3A%2F%2F%2Fhome%2Froot%2Fappmanager_partnerapp.js$partnerAppArguments
     else
       if [ -f /lib/rdk/appmanager.soc ]; then
         . /lib/rdk/appmanager.soc
       fi
-      ./pxscene $startupFile$partnerAppArguments
+      spark_exec $startupFile$partnerAppArguments
     fi
   fi
   echo "pxscene exited"

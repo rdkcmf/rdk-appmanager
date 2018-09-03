@@ -21,6 +21,8 @@ px.import({
     keys: 'px:tools.keys.js',
     Optimus: 'optimus.js'
 }).then(function ready(imports) {
+    module.exports.wantsClearscreen = function() { return false; };
+
     var scene = imports.scene;
     var root = imports.scene.root;
     var keys = imports.keys;
