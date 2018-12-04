@@ -138,6 +138,12 @@ if [ "$BOX_TYPE" = "pi" ]; then
     partnerAppArguments="%3FethIP%3D$ethIP"
 fi
 
+killall -9 runServiceManager.sh
+killall -9 servicemanagerapp
+if [ -e /lib/rdk/runServiceManager.sh ]; then
+  /lib/rdk/runServiceManager.sh &
+  sleep 1
+fi
 
 while :
 do
