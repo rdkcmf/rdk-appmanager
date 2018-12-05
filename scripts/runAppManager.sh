@@ -145,6 +145,14 @@ if [ -e /lib/rdk/runServiceManager.sh ]; then
   sleep 1
 fi
 
+if [ ! -e /opt/disable_rdkbrowser2_server ]; then
+    if [ -e /lib/rdk/launch_rdkbrowser2_server.sh ]; then
+        /lib/rdk/launch_rdkbrowser2_server.sh &
+    else
+        echo "ERROR: can't find /lib/rdk/launch_rdkbrowser2_server.sh"
+    fi
+fi
+
 while :
 do
   if [ -f /opt/appmanager_start.js ]; then
