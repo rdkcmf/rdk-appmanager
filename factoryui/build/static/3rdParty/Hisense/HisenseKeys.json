@@ -1,0 +1,384 @@
+{
+	"keys": {
+
+		"0xd": {
+			"KeyName": "StandBy",
+			"framecode": "0xf20dbf00",
+			"scancode": "0xd",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x47": {
+			"KeyName": "OK",
+			"framecode": "0xb847fc00",
+			"scancode": "0x47",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x10": {
+			"KeyName": "Key next right to RC-5",
+			"framecode": "0xef10bf00",
+			"scancode": "0x10",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x13": {
+			"KeyName": "Key 2nd right of RC-5 (last in second row)",
+			"framecode": "0xec13bf00",
+			"scancode": "0x13",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x1": {
+			"KeyName": "Num 1",
+			"framecode": "0xfe01bf00",
+			"scancode": "0x1",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x2": {
+			"KeyName": "Num 2",
+			"framecode": "0xfd02bf00",
+			"scancode": "0x2",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x3": {
+			"KeyName": "Num 3",
+			"framecode": "0xfc03bf00",
+			"scancode": "0x3",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x4": {
+			"KeyName": "Num 4",
+			"framecode": "0xfb04bf00",
+			"scancode": "0x4",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x5": {
+			"KeyName": "Num 5",
+			"framecode": "0xfa05bf00",
+			"scancode": "0x5",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x6": {
+			"KeyName": "Num 6",
+			"framecode": "0xf906bf00",
+			"scancode": "0x6",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x7": {
+			"KeyName": "Num 7",
+			"framecode": "0xf807bf00",
+			"scancode": "0x7",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x8": {
+			"KeyName": "Num 8",
+			"framecode": "0xf708bf00",
+			"scancode": "0x8",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x9": {
+			"KeyName": "Num 9",
+			"framecode": "0xf609bf00",
+			"scancode": "0x9",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0xa": {
+			"KeyName": "MAC",
+			"framecode": "0xf50afc00",
+			"scancode": "0xa",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x0__": {
+			"KeyName": "NUM 0",
+			"framecode": "0xff00bf00",
+			"scancode": "0x0",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x38": {
+			"KeyName": "IP",
+			"framecode": "0xb14efc00",
+			"scancode": "0x4e",
+      "Callback": "ShowAddressInfo"
+    },
+
+		"0x4d": {
+			"KeyName": "DMP",
+			"framecode": "0xb24dbf00",
+			"scancode": "0x4d",
+      "Rpc": "ShowMediaPlayer"
+		},
+
+		"0x4e": {
+			"KeyName": "Play",
+			"framecode": "0xb14ebf00",
+			"scancode": "0x4e",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x5a": {
+			"KeyName": "Stop",
+			"framecode": "0xa55abf00",
+			"scancode": "0x5a",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x5c": {
+			"KeyName": "Exit",
+			"framecode": "0xa35cbf00",
+			"scancode": "0x5c",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x14": {
+			"KeyName": "Menu",
+			"framecode": "0xeb14bf00",
+			"scancode": "0x14",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0xe": {
+			"KeyName": "Mute",
+			"framecode": "0xf10ebf00   bf00",
+			"scancode": "0xe",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x12": {
+			"KeyName": "Source",
+			"framecode": "0xed12bf00",
+			"scancode": "0x12",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x0": {
+			"KeyName": "M key",
+			"framecode": "0xff00fc00  fc00",
+			"scancode": "0x0",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x16": {
+			"KeyName": "Arrow Up",
+			"framecode": "0xe916bf00",
+			"scancode": "0x16",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x19": {
+			"KeyName": "Arror left",
+			"framecode": "0xe619bf00",
+			"scancode": "0x19",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x18": {
+			"KeyName": "Arrow right",
+			"framecode": "0xe718bf00",
+			"scancode": "0x18",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x17": {
+			"KeyName": "Arrow down",
+			"framecode": "0xe817bf00",
+			"scancode": "0x17",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x15__": {
+			"KeyName": "Enter",
+			"framecode": "0xea15bf00",
+			"scancode": "0x15",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x44": {
+			"KeyName": "Volume +",
+			"framecode": "0xbb44bf00",
+			"scancode": "0x44",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x43": {
+			"KeyName": "Volume -",
+			"framecode": "0xbc43bf00",
+			"scancode": "0x43",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x1b": {
+			"KeyName": "TV",
+			"framecode": "0xe41bbf00",
+			"scancode": "0x1b",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x5__": {
+			"KeyName": "AV",
+			"framecode": "0xfa05fc00",
+			"scancode": "0x5",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x4a": {
+			"KeyName": "CH +",
+			"framecode": "0xb54abf00",
+			"scancode": "0x4a",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x4b": {
+			"KeyName": "CH -",
+			"framecode": "0xb44bbf00",
+			"scancode": "0x4b",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x9__": {
+			"KeyName": "ENERGY",
+			"framecode": "0xf609fc00",
+			"scancode": "0x9",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+
+		"0x22": {
+			"KeyName": "AGING <<< DUMMY DUMMY DUMMY",
+			"framecode": "0xa758fc00",
+      "scancode": "0x22",
+      "Callback": "ShowTestPattern"
+    },
+
+		"0x28": {
+			"KeyName": "IP KEY",
+			"framecode": "0x123456789",
+      "scancode": "0x28",
+      "Callback": "ShowAddressInfo"
+    },
+
+		"0x42": {
+			"KeyName": "SCREEN",
+			"framecode": "0xa758fc00",
+      "scancode": "0x58",
+      "Callback": "ShowTestPattern",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x15": {
+			"KeyName": "AGING",
+			"framecode": "0xea15fc00",
+			"scancode": "0x15",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x6__": {
+			"KeyName": "BALANCE",
+			"framecode": "0xf906fc00",
+			"scancode": "0x6",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x40": {
+			"KeyName": "ADC",
+			"framecode": "0xbf40fc00",
+			"scancode": "0x40",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x1c": {
+			"KeyName": "3D",
+			"framecode": "0xe31cfc00",
+			"scancode": "0x1c",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x18__": {
+			"KeyName": "PC",
+			"framecode": "0xe718fc00",
+			"scancode": "0x18",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x52": {
+			"KeyName": "HDMI",
+			"framecode": "0xad52fc00",
+			"scancode": "0x52",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x1__": {
+			"KeyName": "COMPONENT",
+			"framecode": "0xfe01fc00",
+			"scancode": "0x1",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0xd__": {
+			"KeyName": "LOGO",
+			"framecode": "0xf20dfc00",
+			"scancode": "0xd",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x5d": {
+			"KeyName": "F1",
+			"framecode": "0xa25dfc00",
+			"scancode": "0x5d",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x46": {
+			"KeyName": "F2",
+			"framecode": "0xbd42fc00",
+			"scancode": "0x42",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x56": {
+			"KeyName": "F3",
+			"framecode": "0xa956fc00",
+			"scancode": "0x56",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x48": {
+			"KeyName": "F4",
+			"framecode": "0xb748fc00",
+			"scancode": "0x48",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x53": {
+			"KeyName": "F5",
+			"framecode": "0xac53fc00",
+			"scancode": "0x53",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x1d": {
+			"KeyName": "F6",
+			"framecode": "0xe21dfc00",
+			"scancode": "0x1d",
+      "Rpc": "RPC.Todo.Todo"
+		},
+
+		"0x4f": {
+			"KeyName": "F7",
+			"framecode": "0xb04ffc00",
+			"scancode": "0x4f",
+      "Rpc": "RPC.Todo.Todo"
+		}
+	}
+}

@@ -1,0 +1,103 @@
+{
+	"cmds": {
+		"0xA0000000": {
+			"Name": "1.1 START SERIAL",
+			"command": "0xA0000000",
+			"dataLength": "0",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1020000": {
+			"Name": "1.3 FACTORY OPERATION",
+			"command": "0xA1020000",
+			"dataLength": "1",
+			"dataDetails": "2-Enter M 3-Exit M 4-Enter Aging 5-Exit Aging 8-Clear Master Module 9-Factory Reset",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1040000": {
+			"Name": "1.5 SWITCHING AV",
+			"command": "0xA1040000",
+			"dataLength": "1",
+			"dataDetails": "0-AV1 1-AV2 2-AV3",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1060000": {
+			"Name": "1.7 SWITCHING HDMI",
+			"command": "0xA1060000",
+			"dataLength": "1",
+			"dataDetails": "0-HDMI1 1-HDMI2 2-HDMI3",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1080000": {
+			"Name": "1.9 SWITCHING TV DTV",
+			"command": "0xA1080000",
+			"dataLength": "1",
+			"dataDetails": "5-AIR 7-Cable",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1090000": {
+			"Name": "1.10 SET VOLUMNE",
+			"command": "0xA1090000",
+			"dataLength": "1",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA10C0000": {
+			"Name": "1.13 SET IMAGE MODE",
+			"command": "0xA10C0000",
+			"dataLength": "1",
+			"dataDetails": "0-Standard 1-Dynamic 6-Energy Saving 7-Vivid",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA10D0000": {
+			"Name": "1.14 SET COLOR TEMPERATURE",
+			"command": "0xA10D0000",
+			"dataLength": "1",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA10E0000": {
+			"Name": "1.15 SET BUILT-IN CARD",
+			"command": "0xA10E0000",
+			"dataLength": "1",
+			"dataDetails": "0-Off 1-White 2-Red 3-Green 4-Blue 5-Black 6-Press Card",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1100000": {
+			"Name": "1.17 SET LOGO",
+			"command": "0xA1100000",
+			"dataLength": "3",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1110000": {
+			"Name": "1.18 SET LANGUAGE",
+			"command": "0xA1110000",
+			"dataLength": "3",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1160000": {
+			"Name": "1.23 ENERGY SAVING MODE",
+			"command": "0xA1160000",
+			"dataLength": "1",
+			"dataDetails": "0-Bright 1-Soft 6-Energy Saving 7-Standard",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA11D0000": {
+			"Name": "1.29 SET WHITE BALANCE AND VCOM CARD",
+			"command": "0xA11D0000",
+			"dataLength": "1",
+			"dataDetails": "0-Off White or VCOM 1-On Balance 2-0IRE 3-10IRE 4-20IRE 5-30IRE 6-40IRE 7-50IRE 8-60IRE 9-70IRE 10-80IRE 11-90IRE 12-100IRE 13-Built-in Red 14-Built-in Green 15-Built-in Blue 16-Open VCOM Card",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1230000": {
+			"Name": "1.35 SET PROJECT ID",
+			"command": "0xA1230000",
+			"dataLength": "1",
+			"Rpc": "RPC.Todo.Todo"
+		},
+		"0xA1250000": {
+			"Name": "1.37 SET SSC",
+			"command": "0xA1250000",
+			"dataLength": "1",
+			"dataDetails": "0-Close SSC 1-Open SSC",
+			"Rpc": "RPC.Todo.Todo"
+		}
+	}
+}

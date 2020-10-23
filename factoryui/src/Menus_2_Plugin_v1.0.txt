@@ -1,0 +1,158 @@
+Plugins Key
+
+  A - TvMgr
+  B - DisplaySettings   (RDK-28977)
+  C - DeviceInfo
+  D - SystemServices
+  E - UserPreferences
+  F - LocationSync
+  G - LocationService
+  H - DeviceIdentification
+
+---------------- "Factory", ----------------
+        "White Balance",
+                "Panel",         "B1",
+                "R Gain",        "128",
+                "G Gain",        "128",
+                "B Gain",        "128",
+                "R Offset",      "256",
+                "B Offset",      "256",
+                "G Offset",      "256",
+                "Color Temp",    "Standard",                       <<<<<<<<<<<<<<<<<<   A
+        "Channel Init",
+        "Options",
+                "ToFac",         "M / F",
+            "Clear All",
+                "Region",        "North America",
+                "Country",       "59 United States",               <<<<<<<<<<<<<<<<<<   F / G
+                "Logo",          "1 Hisense",                      <<<<<<<<<<<<<<<<<<   F / G
+                "Lang",          "1 English",                      <<<<<<<<<<<<<<<<<<   E
+                "UART",          "On",
+                "PQ COM",        "Off",
+            "Test Pattern",
+            "Inlay Pattern",
+                "Gamma Status",
+                "NG",
+            "AutoGamma Reset",
+                "Running time",
+                "0d:18h:40m",
+        "Soft Version",
+            "Version",       "40.V0000.A31.EUV",
+            "",                "01.00A.K0916",
+            "MAC Adr",       "01:B0:B7:FC:8C:E2",                  <<<<<<<<<<<<<<<<<<   C / D
+            "",                 "MEX sma eng",
+            "Cur project ID",   "003 40A31EUV",                    <<<<<<<<<<<<<<<<<<   H
+            "HDCP2.2 Key",       "00000009",
+            "HDCP1.4 Key",       "00001108",
+            "ESN",           "HVSMTVK76500000",
+            "",              "000000000000000",
+            "",               "000000000009",
+            "WIDEVINE key",     "00000009",
+            "Service No.",          "",
+
+
+---------------- "Design", ----------------
+        "Video Curve",
+                "Property",      "Bright",
+                "Curve0",        "428",
+                "Curve25",       "470",
+                "Curve50",       "512",
+                "Curve75",       "572",
+                "Curve100",      "623",
+        "Backlight",
+                "Min Backlight", "0",
+                "20 Backlight",  "70",
+                "Mid Backlight", "130",
+                "80 Backlight",  "190",
+                "Max Backlight", "1255",
+        "Picture Mode",
+                "Mode",          "Energy Saving / Cinema night",   <<<<<<<<<<<<<<<<<<   A
+                "Brightness",    "49",                             <<<<<<<<<<<<<<<<<<   A
+                "Constrast",     "51",                             <<<<<<<<<<<<<<<<<<   A
+                "Color",         "55",                             <<<<<<<<<<<<<<<<<<   A
+                "Sharpness",     "10",                             <<<<<<<<<<<<<<<<<<   A
+                "Backlight",     "75",                             <<<<<<<<<<<<<<<<<<   A
+        "Test Pattern",
+            "Sub Item A",
+            "Sub Item B",
+            "Sub Item C",
+            "Sub Item D",
+        "Bypass",
+                "PQ",           "Enable",
+                "GAMMA",        "Enable",
+                "Color",        "Enable",
+                "xvYCC",        "Enable",
+        "Audio Volume",
+                "Min Volume",   "0",                               <<<<<<<<<<<<<<<<<<   B
+                "25 Volume",    "39",                              <<<<<<<<<<<<<<<<<<   B
+                "Mid Volume",   "56",                              <<<<<<<<<<<<<<<<<<   B
+                "75 Volume",    "75",                              <<<<<<<<<<<<<<<<<<   B
+                "Max Volume",   "99",                              <<<<<<<<<<<<<<<<<<   B
+        "Audio mode",
+                "Mode",      "Standard",
+                "WALL Mode", "Off",
+                "120Hz",     "0",
+                "500Hz",     "0",
+                "1.5KHz",    "0",
+                "5KHz",      "0",
+                "10KHz",     "0",
+        "Project ID >>",
+            "Sub Item A",
+            "Sub Item B",
+            "Sub Item C",
+            "Sub Item D",
+        "Panel Option >>",
+                "Over Drive", "On",
+                "Demura",     "On",
+            "Prescale",       "28",
+            "HP Prescale",    "151",
+        "HP DRC",
+                "ENABLE",  "On",
+                "HP DRC",  "4",
+        "PEQ",
+                "SOC DRC Enable",  "On",
+                "SOC DRC Value",   "18",
+                "SOC HPF Enable",  "On",
+                "SOC HPF Value",   "100",
+                "PEQ",             "On",
+                "PEQ BAND",        "On",
+                "FC-Fine Step",    "10",
+                "FC-Fine Hz",      "150",
+                "Gain db",         "4",
+                "Q",               "30",
+        "MAINCHIP SSC",
+                "LDS On/Off",                "On",
+                "LDS STEP (TCON External)",  "30 (0.01%)",
+                "LDS SPAN (TCON External)",  "300 (0.1KHZ)",
+                "ISP STEP (TCON Built-in)",  "30 (0.1%)",
+                "ISP SPAN (TCON Built-in)",  "300 (0.1 KHZ)",
+                "DDR On/Off",                "On",
+                "DDR STEP",                  "10",
+                "DDR SPAN",                  "100",
+        "AVC",
+                "Enable",       "Off",
+                "Mode",         "NG",
+                "ThreShold",    "0x18",
+                "Attack Time",  "4",
+                "Release Time", "2",
+        "Boot Config >>",
+                "Fastboot",     "On",
+        "Certification mode",  "Off",
+        "Wifi Channel >>",
+                "List1", "1 2 3 4 5 6 7 8 9 10 11 12 13",
+                "List2", "",
+                "List3", "",
+                "List4", "",
+                "List5", "",
+                "List6", "",
+        "Builtin Video",
+            "Sub Item A",
+            "Sub Item B",
+            "Sub Item C",
+            "Sub Item D",
+        "Check deploy data",
+        "Builtin keys >>",
+            "Playready key interTaca",
+            "Youtube key interTaca",
+          "EULADPP",
+          "10038",
