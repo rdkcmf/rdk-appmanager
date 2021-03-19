@@ -60,6 +60,11 @@ waitforserver()
 
 waitforserver
 
+if [ -f /lib/rdk/insertPartnerId.sh ] ;then
+      /lib/rdk/insertPartnerId.sh  
+fi  
+
+
 appurl=$offlineApp
 
 if [ -f  /tmp/route_available ] ; then
