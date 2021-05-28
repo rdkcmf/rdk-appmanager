@@ -37,7 +37,7 @@ else
    touch /tmp/.xreSplashDrawn
 fi
 
-waitforserver()
+waitForServer()
 {
       status="closed"
       host="127.0.0.1"
@@ -58,7 +58,30 @@ waitforserver()
       done
 }
 
-waitforserver
+waitForNetwork()
+{
+    status="closed"
+    log "Checking for connectivity"
+    while [ "$status" != "open" ]
+    do
+    {
+	 status="$([  -f  /tmp/route_available ] && echo "open" ||echo "closed")"
+         if [ "$status" = "open" ] ; then
+            log "connectivity check passed"
+            break;
+         else
+            log "connectivity check failed"
+            sleep 2
+         fi
+    }
+    done
+}
+
+if [ -n "$COMMUNITY_BUILDS" ]; then
+	waitForServer
+else
+	waitForNetwork
+fi
 
 if [ -f /lib/rdk/insertPartnerId.sh ] ;then
       /lib/rdk/insertPartnerId.sh  
