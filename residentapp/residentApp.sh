@@ -95,6 +95,8 @@ if [ -f  /tmp/route_available ] ; then
 fi
 
 log "Selected reference app is $appurl"
+#System plugin needs to be activated for properly showing the time in UI
+curl -X POST -H "Content-Type: application/json" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "Controller.1.activate", "params": { "callsign": "org.rdk.System" }}' ; echo
 curl -X POST -H "Content-Type: application/json" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "Controller.1.activate", "params": { "callsign": "org.rdk.RDKShell" }}' ; echo
 sleep 3
 curl -s -X POST -H "Content-Type: application/json"  'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "org.rdk.RDKShell.1.launch", "params": {"callsign":"ResidentApp","type": "ResidentApp","uri":'"$appurl?data=$partnerApps"'}}' >>$LOGFILE 2>&1
