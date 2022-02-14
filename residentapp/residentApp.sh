@@ -93,12 +93,14 @@ appurl=$offlineApp
 if [ -f  /tmp/route_available ] ; then
   appurl=$residentApp
 fi
-
+THUNDERSECURITY=`tr181 Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderSecurity.Enable 2>&1`
 log "Selected reference app is $appurl"
+log "Is THUNDERSECURITY enabled ?= '$THUNDERSECURITY'"
+TOKEN=`WPEFrameworkSecurityUtility | sed -r 's/[{:",}]/ /g' | awk '{print $2}'`
+
 #System plugin needs to be activated for properly showing the time in UI
-curl -X POST -H "Content-Type: application/json" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "Controller.1.activate", "params": { "callsign": "org.rdk.System" }}' ; echo
-curl -X POST -H "Content-Type: application/json" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "Controller.1.activate", "params": { "callsign": "org.rdk.RDKShell" }}' ; echo
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "Controller.1.activate", "params": { "callsign": "org.rdk.System" }}' ; echo
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "Controller.1.activate", "params": { "callsign": "org.rdk.RDKShell" }}' ; echo
 sleep 3
-curl -s -X POST -H "Content-Type: application/json"  'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "org.rdk.RDKShell.1.launch", "params": {"callsign":"ResidentApp","type": "ResidentApp","uri":'"$appurl?data=$partnerApps"'}}' >>$LOGFILE 2>&1
-curl -s -X POST -H "Content-Type: application/json"  'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc":"2.0","id":"3","method": "org.rdk.RDKShell.1.setFocus", "params": {"client": "ResidentApp"}}'
-curl -s -X POST -H "Content-Type: application/json"  'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc":"2.0","id":"3","method": "org.rdk.RDKShell.1.setVisibility", "params": {"client": "ResidentApp", "visible": true}}'
+curl -s -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "org.rdk.RDKShell.1.launch", "params": {"callsign":"ResidentApp","type": "ResidentApp","visible": true,"focus": true,"uri":'"$appurl?data=$partnerApps"'}}' >>$LOGFILE 2>&1
+
