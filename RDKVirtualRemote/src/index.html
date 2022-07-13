@@ -1,0 +1,87 @@
+<!-- 
+/**
+ * If not stated otherwise in this file or this component's LICENSE
+ * file the following copyright and licenses apply:
+ *
+ * Copyright 2022 RDK Management
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
+-->
+
+<!DOCTYPE html>
+<html>
+<title>RDK-V Virtual Remote</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/main.css">
+
+<body>
+
+    <div id="RemoteManager">
+
+        <div class="content">
+
+            <div class="jcenter top-btn">
+                <button class="mute-btn btn" onclick="keyrequest('MUTE')"><img src="./assets/images/mute-icon.png" alt="Mute"></button>
+                <button class="power-btn btn" onclick="keyrequest('POWER_KEY')"><img src="./assets/images/power-icon.png" alt="Power"></button>
+            </div>
+            <div class="center center-btn">
+                <button class="ok-btn btn" onclick="keyrequest('OK')">OK</button>
+                <button class="left-btn btn" onclick="keyrequest('LEFT')"><img src="./assets/images/left-arrow.png" alt="Left Key"></button>
+                <button class="right-btn btn" onclick="keyrequest('RIGHT')"><img src="./assets/images/right-arrow.png" alt="Right Key"></button>
+                <button class="up-btn btn" onclick="keyrequest('UP')"><img src="./assets/images/up-arrow.png" alt="Up Key"></button>
+                <button class="down-btn btn" onclick="keyrequest('DOWN')"><img src="./assets/images/down-arrow.png" alt="Down Key"></button>
+            </div>
+
+            <div class="center bottom-btn">
+                <button class="back-btn btn" onclick="keyrequest('BACK')"><img src="./assets/images/back-arrow.png" alt="Back"></button>
+                <button class="home-btn btn" onclick="keyrequest('HOME')"><img src="./assets/images/home-icon.png" alt="Home"></button>
+                <button class="options-btn btn" onclick="keyrequest('OPTIONS')"><img src="./assets/images/dot-icon.png" alt="Options"></button>
+            </div>
+
+            <div class="center volch-btn">
+                <div class="vol-btn">
+                    <button class="volup-btn btn" onclick="keyrequest('VOLUMEUP')"><img src="./assets/images/volume-up.png" alt="Volume Up"></button>
+                    <div class="voltext">VOL</div>
+                    <button class="voldown-btn btn" onclick="keyrequest('VOLUMEDOWN')"><img src="./assets/images/volume-down.png" alt="Volume Down"></button>
+
+                </div>
+                <div class="micbtn playpausebtn">
+                    <button class="mic-btn btn" onclick="keyrequest('MIC')"><img src="./assets/images/microphone-icon.png" alt="Mic"></button>
+                    <button class="pp-btn btn" onclick="keyrequest('PLAYPAUSE')"><img src="./assets/images/playpause.png" alt="Play Pause"></button>
+
+                </div>
+
+                <div class="ch-btn">
+                    <button class="chup-btn btn" onclick="keyrequest('CHANNELUP')"><img src="./assets/images/up-arrow.png" alt="Channel Up"></button>
+                    <div class="voltext">CH</div>
+                    <button class="chdown-btn btn" onclick="keyrequest('CHANNELDOWN')"><img src="./assets/images/down-arrow.png" alt="Channel Down"></button>
+                </div>
+
+            </div>
+
+            <div class="center">
+                <input type="text" value="192.168.1.100" size="10" id="emv_ip" />
+            </div>
+
+            <div class="center rdklogo">
+                <img src="./assets/RDKLogo.png" alt="RDK">
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/remote.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+/**
+ * If not stated otherwise in this file or this component's LICENSE
+ * file the following copyright and licenses apply:
+ *
+ * Copyright 2022 RDK Management
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
+
+.content {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    height: 500px;
+    width: 150px;
+    background-color: #1a1a1a;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 25px;
+    box-shadow: 0px 1px 5px 2px #000;
+    border: 2px solid #555
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jcenter {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+}
+
+button.btn {
+    background-color: #1a1a1a;
+    margin: 0;
+    border: 2px solid #111;
+    padding: 3px 5px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 3px 0px #000;
+    -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+button.btn:focus,
+button.btn:hover,
+button.mic-btn.btn:focus,
+button.mic-btn.btn:hover
+ {
+    background-color: #1a1a1a;
+    margin: 0;
+    border: 2px solid #e67e22;
+    padding: 3px 5px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 3px 0px #e67e22;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.center.center-btn {
+    margin-top: 70px;
+    position: absolute;
+    width: 150px;
+    opacity: 0.8;
+}
+
+button.ok-btn.btn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 30px;
+    padding: 4px 7px;
+    margin-left: 0px;
+}
+
+button.left-btn.btn {
+    left: 0;
+    position: inherit;
+}
+
+button.right-btn.btn {
+    left: 108px;
+    position: inherit;
+}
+
+button.up-btn.btn {
+    position: inherit;
+    top: -51px;
+    left: 54px;
+}
+
+button.down-btn.btn {
+    position: inherit;
+    top: 54px;
+}
+
+.center.bottom-btn {
+    margin-top: 185px;
+    justify-content: space-between;
+    opacity: 0.8;
+}
+
+.options-btn.btn img {
+    width: 3px;
+    padding: 0 9px;
+}
+
+.voltext {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.center.volch-btn {
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.micbtn.playpausebtn {
+    text-align: center;
+    display: inline-block;
+    height: 114px;
+}
+
+button.mic-btn.btn {
+    background-color: #101010;
+    border: 2px solid #000;
+}
+
+button.mic-btn.btn img {
+    width: 25px;
+    height: 25px;
+}
+
+button.pp-btn.btn {
+    margin-top: 27px;
+    margin-left: 2px;
+}
+
+.pp-btn.btn img {
+    width: 24px;
+    height: 29px;
+    margin-left: 5px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.center.rdklogo {
+    margin-top: 25px;
+}
+
+.center #emv_ip {
+    margin-top: 25px;
+}
+
+input[type=text] {
+    padding: 5px 12px;
+    border: 2px solid #555;
+    background: #101010;
+    box-sizing: border-box;
+    resize: vertical;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 0px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+
+input[type=text]:focus
+{
+    border: 2px solid #e67e22;
+    background-color: #000;
+}
+
+input[type=text] {
+    border: 2px solid #555;
+    background: #101010;
+    display: inline-block;
+    font-size: 13px;
+    width: 150px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #e67e22;
+    background-color: #000;
+    color: #fff;
+}
+
+/* 
+Buttons/keys allignment adjustmant
+*/
+
+button.mute-btn.btn img,
+button.power-btn.btn img,
+button.left-btn.btn img{
+    margin-top: 5px;
+}
+
+button.chdown-btn.btn img{
+    margin-top: 6px;
+}
