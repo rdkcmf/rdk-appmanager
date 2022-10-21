@@ -1,0 +1,24 @@
+{
+    "name": "emulatormanager",
+    "version": "1.0.0",
+    "description": "RDK-V Emulator Manager. Emulator Manager for Developers to provide application development support.",
+    "main": "./src/main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^15.3.0",
+        "electron-builder": "^22.13.1",
+        "electron-installer-debian": "^3.1.0",
+        "electron-rebuild": "^3.2.7"
+    },
+    "dependencies": {
+        "drivelist": "^9.2.4",
+        "electron-packager": "^15.5.2",
+        "fs-extra": "^10.0.0",
+        "sudo-prompt": "^9.2.1",
+        "usb-detection": "^4.14.1"
+    }
+}

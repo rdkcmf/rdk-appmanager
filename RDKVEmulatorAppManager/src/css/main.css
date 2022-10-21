@@ -1,0 +1,471 @@
+/**
+ * If not stated otherwise in this file or this component's LICENSE
+ * file the following copyright and licenses apply:
+ *
+ * Copyright 2022 RDK Management
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+/* top menus css starts */
+body {
+    background-image: linear-gradient(to right bottom, #000000, #010101, #020202, #030303, #040404, #040405, #050505, #050506, #040507, #040607, #030608, #020707);
+    background-repeat: no-repeat;
+    height: 560px;
+    font-family: Montserrat;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 2px solid #E67E22
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat;
+    margin: 5px 0px 25px 0px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+a {
+    color: #e67e22;
+    font-size: 14px;
+}
+
+ul {
+    margin: 20px 0;
+    padding-left: 45px;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+li {
+    padding-bottom: 2px;
+}
+
+hr {
+    height: 1px;
+    border-color: #202020;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.topmenu {
+    position: relative;
+    height: 30px;
+    clear: both;
+    padding: 20px 15px 20px;
+    background-image: linear-gradient(to right bottom, #000000, #010101, #020202, #030303, #040404, #040405, #050505, #050506, #040507, #040607, #030608, #020707);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.menu {
+    float: left;
+}
+
+.menu label,
+.content .top-btn {
+    background-image: linear-gradient(to bottom, #090909, #0d0c10, #0f1015, #111219, #12151d, #10151d, #0e161d, #0c161d, #081318, #051013, #030c0e, #020707);
+    border: 1px solid #0f0f0f;
+    font-family: Montserrat;
+    padding: 6px 10px;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 13px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.menu label:hover,
+.content .top-btn:hover {
+    background-image: linear-gradient(to bottom, #e67e22, #ea8c2c, #ee9937, #f2a642, #f6b34e, #f6b34e, #f6b34e, #f6b34e, #f2a642, #ee9937, #ea8c2c, #e67e22);
+}
+
+.content .top-btn:focus,
+.content button.btn:focus {
+    background-image: linear-gradient(to bottom, #e67e22, #ea8c2c, #ee9937, #f2a642, #f6b34e, #f6b34e, #f6b34e, #f6b34e, #f2a642, #ee9937, #ea8c2c, #e67e22);
+    color: #ffffff;
+}
+
+.menu [type=radio] {
+    display: none;
+}
+
+span.simple_text.top-ip-input {
+    font-size: 13px;
+    border: 2px solid #555;
+    border-right: none;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: -5px;
+    margin-right: 0;
+}
+
+span.simple_text {
+    font-size: 14px;
+    margin-right: 10px
+}
+
+.imglist span.simple_text {
+    font-size: 14px;
+}
+
+.content {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    display: none;
+    height: 455px;
+    overflow: auto;
+}
+
+[type=radio]:checked~label {
+    z-index: 2;
+    background-image: linear-gradient(to bottom, #e67e22, #ea8c2c, #ee9937, #f2a642, #f6b34e, #f6b34e, #f6b34e, #f6b34e, #f2a642, #ee9937, #ea8c2c, #e67e22);
+    border-bottom: none;
+    padding-bottom: 8px;
+}
+
+[type=radio]:checked~label~.content {
+    z-index: 1;
+    display: block;
+}
+
+input#emulator_ip {
+    min-width: 150px;
+}
+
+input#app_url {
+    width: 575px;
+    margin-right: 10px
+}
+
+input#home_app_url {
+    width: 575px;
+    margin-right: 10px
+}
+
+.setappurl {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #202020;
+    padding-bottom: 10px
+}
+
+.configip {
+    margin-bottom: 10px;
+}
+
+.content button {
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.menu .imglist input,
+.menu .oslist input {
+    display: inline;
+}
+
+.menu .imglist label,
+.menu .oslist label {
+    background: none;
+    border: none;
+    z-index: auto;
+    color: #ffffff;
+    padding: 0;
+    font-size: 14px;
+}
+
+.imglist,
+.oslist {
+    position: absolute;
+}
+
+.imglist button {
+    margin-top: 20px;
+}
+
+.required {
+    color: red;
+}
+
+.oslist_actionbtns {
+    margin-top: 15px;
+}
+
+button.valapi_btn {
+    margin-left: 255px;
+    margin-top: 5px;
+}
+
+.content button:hover {
+    background-color: #333333;
+}
+
+.content button.top-btn:focus {
+    background-color: #e67e22;
+}
+
+ul.testresult {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+textarea#apiresult {
+    border: 0;
+}
+
+.testresult li {
+    margin-right: 5px;
+}
+
+span.simple_text.apiresult {
+    color: #E3E3E3;
+}
+
+#vm_list {
+    margin-bottom: 10px;
+}
+
+.apiname .simple_text {
+    width: 170px;
+    display: inline-block;
+}
+
+.apiname {
+    margin-bottom: 5px;
+}
+
+.apiparams .simple_text {
+    width: 170px;
+    display: inline-block;
+}
+
+input.api_inputbox {
+    width: 410px;
+}
+
+.apiparams {
+    margin-bottom: 5px;
+}
+
+img.vremotes {
+    width: 125px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.remotemgr {
+    margin-top: 25px;
+}
+
+.remotemgr.vremote.rdkremote {
+    width: 150px;
+    text-align: center;
+}
+
+input[type=text], select, textarea {
+    padding: 5px 12px;
+    border: 2px solid #555;
+    background: #101010;
+    box-sizing: border-box;
+    resize: vertical;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 13px;
+    font-family: Montserrat;
+    line-height: 17px;
+}
+
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid #e67e22;
+    background-color: #000;
+}
+
+input[type=text]#emv_ip {
+    padding: 5px;
+    border: 2px solid #555;
+    background: #101010;
+    margin-left: -6px;
+    display: inline-block;
+    margin-top: -5px;
+    font-size: 13px;
+    width: 120px;
+    line-height: 16px;
+}
+
+input[type=text]#emv_ip:focus {
+    border: 3px solid #e67e22;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn {
+    font-family: Montserrat;
+    border: none;
+    background-color: #000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0px 15px;
+    display: inline-block;
+    margin: 0px 10px 15px 0px;
+    line-height: 31px;
+    font-weight: 400;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+}
+
+.btn:before {
+    opacity: 0;
+    content: "";
+    background-color: #e67e22;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-radius: inherit;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.btn:after {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border: 2px solid #e67e22;
+    content: '';
+    border-radius: inherit;
+}
+
+.btn:hover,
+.btn.hover {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.btn:hover:before,
+.btn.hover:before {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+    z-index: -1;
+}
+
+
+div.autotestopt {
+    margin-top: 15px;
+}
+
+div.autotestopt .simple_text {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.autotestopt .btn {
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.wrapper.api_result_block {
+    width: 825px;
+}
+
+.box_right {
+    float: right;
+    width: 565px;
+    border: 2px solid #555;
+    background: #101010;
+    padding: 15px;
+    padding-right: 0;
+    height: 265px;
+    overflow: auto;
+}
+
+.box_left {
+    float: left;
+    width: 235px;
+}
+
+select#apilist {
+    border-top: none;
+    height: 215px;
+    margin-bottom: 20px;
+}
+
+span#apiresult {
+    font-size: 13px;
+}
+
+.btn.allapi-valbtn {
+    width: 220px;
+    margin-bottom: 0;
+}
+
+select#autoscript {
+    height: 195px;
+}
+
+img.rdklogo {
+    opacity: 0.10;
+    /* width: 600px; */
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -2;
+    margin-top: 150px;
+}
+
+.tools input {
+    margin-right: 10px;
+}
+
+span.sheightx {
+    margin-right: 5px;
+    color: #999;
+}

@@ -12,7 +12,7 @@
     "electron": "^19.0.1",
     "electron-builder": "^23.0.3",
     "electron-installer-debian": "^3.1.0",
-    "electron-packager": "^15.5.1"
+    "electron-packager": "^15.5.2"
   },
   "dependencies": {}
 }

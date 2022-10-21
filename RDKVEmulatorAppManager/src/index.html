@@ -1,0 +1,240 @@
+<!-- 
+/**
+ * If not stated otherwise in this file or this component's LICENSE
+ * file the following copyright and licenses apply:
+ *
+ * Copyright 2022 RDK Management
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
+ 
+-->
+<!DOCTYPE html>
+<html>
+<title>Emulator Manager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/main.css">
+
+<body>
+    <div class="topmenu">
+        <span class="simple_text top-ip-input">Configure Target IP <span class="required"> *</span></span>
+        <input type="text" id="emv_ip" title="Configure RPI/Emulator IP Address " value="192.168.1.100"
+            placeholder="RPi/Emulator IP">
+
+        <!--VM Manager-->
+        <div class="menu">
+            <input type="radio" id="menu-1" name="menu-group-1" checked>
+            <label for="menu-1">VM Manager</label>
+            <div class="content">
+                <h2>Virtual Machine Manager</h2>
+                <button class="top-btn" onclick="evtHandler(SHOW_IMAGE_LIST)"> Install image</button>
+
+                <div class="imglist" style="display: none;" id="imagebox">
+                    <p> <span class="simple_text">Provide image instance name <span class="required">*</span></span>
+                        <input type="text" id="image_ins_name" value="" placeholder="RDK_Emulator_V1">
+                    </p>
+                    <p>Select image from below list to be intalled on VM <span class="required">*</span></p>
+                    <div id="image_path_list"></div>
+                    <!--image name list-->
+                    <button class="btn" onclick="evtHandler(ADD_IMAGE)"> Add Image</button>
+                    <button class="btn" onclick="evtHandler(IMAGE_INSTALL)"> Install</button>
+                    <button class="btn" onclick="evtHandler(DELETE_IMAGE)"> Delete Image</button>
+
+                </div>
+                <button class="top-btn" onclick="evtHandler(SHOW_LIST)"> Show Installed OS List</button>
+
+                <div class="oslist" style="display: none;" id="osbox">
+                    <p>Select intalled OS list on VM to Start VM/Shutdown VM/Reboot VM/Delete VM<span
+                            class="required">*</span></p>
+                    <div id="vm_list"></div>
+                    <!--vm list-->
+                    <br>
+                    <button class="btn" onclick="evtHandler(START_VM)"> Start VM</button>
+                    <button class="btn" onclick="evtHandler(SHUTDOWN_VM)"> Shutdown VM</button>
+                    <button class="btn" onclick="evtHandler(REBOOT_VM)"> Reboot VM</button>
+                    <button class="btn" onclick="evtHandler(DELETE_VM_INSTANCE)">Delete VM instance</button>
+                </div>
+            </div>
+        </div>
+
+        <!--App Manager-->
+        <div class="menu">
+            <input type="radio" id="menu-2" name="menu-group-1">
+            <label for="menu-2">App Manager</label>
+            <div class="content ">
+                <h2>Application Manager</h2>
+                <div class="setappurl">
+                    <span class="simple_text">Set app url </span>
+                    <input type="text" id="app_url" placeholder="Ex: https://youtube.com or http://localhost:port/">
+                    <button class="btn" onclick="evtHandler(LAUNCH_HTML_APP)"> Launch Application</button>
+                </div>
+                <span class="simple_text">Home app url </span>
+                <input type="text" id="home_app_url" placeholder="Resident App URL">
+                <button class="btn" onclick="evtHandler(LAUNCH_HOME_APP)"> Launch Application</button><br>
+                <hr>
+                <button class="top-btn" onclick="evtHandler(OPEN_CODE_EDITER)">Launch IDE</button>
+                <button class="top-btn" onclick="evtHandler(SHOW_TEST_SCRIPT)">Automate Tests Option</button>
+                <br>
+                <div class="autotestopt" style="display: none;" id="auto_script_box">
+                    <span class="simple_text">Choose a test option<span class="required"> * </span> </span>
+                    <select id="autoscript" name="autoscript" size=15 style="width: 292px">
+                    </select>
+                    <br>
+                    <button class="btn" onclick="evtHandler(START_TEST)">Submit</button>
+                    <button class="btn" onclick="evtHandler(ADD_SCRIPT)">Add Script</button>
+                    <button class="btn" onclick="evtHandler(DELETE_SCRIPT)">Delete Script</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--tools Manager-->
+        <div class="menu">
+
+            <input type="radio" id="menu-7" name="menu-group-1">
+            <label for="menu-7">Tools</label>
+            <div class="content tools">
+                <h2>Tools</h2>
+                <div>
+                    <div>
+                        <button class="btn" onclick="evtHandler(GETAPPSLIST)">Show Apps</button>
+                        <div id="showapp">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <button class="btn" onclick="evtHandler(MOVEBACK)">Move Back</button>
+                <button class="btn" onclick="evtHandler(MOVEFRONT)">Move Front</button>
+                <hr>
+                <div>
+                    <span class="simple_text">Set opacity</span>
+                    <input type="text" value="100" size="5" id="opacity_txt" />
+                    <button class="btn" onclick="evtHandler(APPLAYER_OPACITY)">Set</button>
+                </div>
+                <hr>
+                <div>
+                    <span class="simple_text">Scale width</span>
+                    <input type="text" value="1" size="5" id="scale_width" />
+                    <span class="simple_text"><span class="sheightx">x</span> Scale height</span>
+                    <input type="text" value="1" size="5" id="scale_height" />
+                    <button class="btn" onclick="evtHandler(SCALE)">Set</button>
+                </div>
+                <hr>
+                <div>
+                    <button class="btn" onclick="evtHandler(SET_FOCUS)">Set Focus</button>
+                    <button class="btn" onclick="evtHandler(VISIBLE)">Visible</button>
+                    <hr>
+                    <button class="btn" onclick="evtHandler(ZOOM_IN)">Zoom-in</button>
+                    <button class="btn" onclick="evtHandler(ZOOM_OUT)">Zoom-out</button>
+                    <hr>
+                    <button class="btn" onclick="evtHandler(MOVELEFT)">Move Left</button>
+                    <button class="btn" onclick="evtHandler(MOVERIGHT)">Move Right</button>
+                    <button class="btn" onclick="evtHandler(MOVEUP)">Move Up</button>
+                    <button class="btn" onclick="evtHandler(MOVEDOWN)">Move Down</button>
+
+                </div>
+
+            </div>
+        </div>
+        <!--API Manager-->
+        <div class="menu">
+            <input type="radio" id="menu-3" name="menu-group-1">
+            <label for="menu-3">API Manager</label>
+            <div class="content apimngr">
+                <h2>RDK Service API Manager</h2>
+                <span class="simple_text">Selected Api params </span>
+                <input type="text" id="api_validation" placeholder="Selected API params will display here"
+                    style="width: 552px; margin-right: 10px;">
+                <button class="btn" onclick="evtHandler(API_VALIDATION)"> Validate Api</button>
+
+                <div class="wrapper api_result_block">
+                    <p class="simple_text">Sample api's</p>
+                    <div class="box_right">
+                        <span class="simple_text">Result:</span>
+                        <ul class="testresult">
+                            <li>
+                            <li><textarea id="apiresult" rows="23" cols="62"
+                                    style="height:230px;width:565px  ;font-size:12px;padding-left: 0px;"> </textarea>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box_left">
+                        <select id="api_component" onchange="evtHandler(SELECT_API_COMPONENT)" name="api_component"
+                            style="width: 220px">
+                        </select>
+                        <br>
+                        <select id="apilist" onchange="evtHandler(SELECT_API)" name="apilist" size=20
+                            style="width: 220px">
+                        </select>
+                    </div>
+                    <button class="btn allapi-valbtn" onclick="evtHandler(ALL_API_VALIDATION)"> Validate All API
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--Remote Manager-->
+        <div class="menu">
+            <input type="radio" id="menu-4" name="menu-group-1">
+            <label for="menu-4">Remote Manager</label>
+
+            <div class="content">
+                <h2>RDK Remote Manager</h2>
+                <div class="remotemgr vremote rdkremote">
+                    <img class="vremotes" src="./assets/images/rdkv-emulator-virtual-remote.png"
+                        alt="RDK Virtual Remote">
+                    <button class="btn" onclick="evtHandler(LAUNCH_REMOTE)"> Use This</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Help-->
+        <div class="menu">
+            <input type="radio" id="menu-6" name="menu-group-1">
+            <label for="menu-6">Help</label>
+            <div class="content">
+                <h2 style="color: red;">Inprogress ...</h2>
+                <p>Refer RDK central wiki link for the complete documentation:
+                <ul>
+                    <li><a href="https://wiki.rdkcentral.com/display/RDK/RDK-V+Emulator+manager"
+                            target="_blank">https://wiki.rdkcentral.com/display/RDK/RDK-V+Emulator+manager</a></li>
+                </ul>
+                </p>
+                <p><b>ElectronJS: </b>For the complete documentation on electronjs please refer link:
+                <ul>
+                    <li><a href="https://www.electronjs.org" target="_blank"> https://www.electronjs.org</a>
+                    </li>
+                </ul>
+                </p>
+                <p><b>RDK Services: </b>RDK Services are nothing but the RDK components are implemented as Thunder Nano
+                    Services and maintained in RDK Central's. For the complete documentation on RDK Services please
+                    refer links:
+                <ul>
+                    <li> <a href="https://wiki.rdkcentral.com/display/RDK/RDK+Services"
+                            target="_blank">https://wiki.rdkcentral.com/display/RDK/RDK+Services</a></li>
+                    <li><a href="https://github.com/rdkcentral/rdkservices"
+                            target="_blank">https://github.com/rdkcentral/rdkservices</a></li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <img class="rdklogo" src="./assets/images/RDKLogo.png" />
+    <script src="./js/index.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/event.js"></script>
+    <script src="./js/ipc.js"></script>
+</body>
+
+</html>

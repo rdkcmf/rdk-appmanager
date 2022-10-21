@@ -1,0 +1,21 @@
+[
+    {"value":"HOME","wait":200},    
+    {"value":"DOWN","wait":200},
+    {"value":"RIGHT","wait":1700},
+    {"value":"RIGHT","wait":1700},
+    {"value":"RIGHT","wait":1700},
+    {"value":"RIGHT","wait":1700},
+    {"value":"RIGHT","wait":1700},
+    {"value":"RIGHT","wait":1700},
+    {"value":"RIGHT","wait":1700},
+    {"value":"RIGHT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"LEFT","wait":1700},
+    {"value":"HOME","wait":500}    
+]

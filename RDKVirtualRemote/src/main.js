@@ -16,9 +16,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
-
+ 
 const {app, BrowserWindow} = require('electron') 
+const url = require('url') 
 const path = require('path')  
+const os = require('os');
 const electron = require("electron");
 const ipc = electron.ipcMain;
 let window;
@@ -40,33 +42,47 @@ ipc.on('screenMove', function(event, arg) {
 //create application window 
 function createWindow() { 
     
-   let iconPath = path.resolve(__dirname, `./assets/icon.png`)
-
-   window = new BrowserWindow({
-      width: 290,
-      height: 570,
-      frame: false,
-      transparent: true,
-      resizable: false,
-      maximizable: false,
-      show: true,
-      x: 1000,
-      y: 100,
-      icon: iconPath,
-      webPreferences: {
-         nodeIntegration: true,
-         contextIsolation: false,
-         enableRemoteModule: false,
-      }
+    let iconPath = path.resolve(__dirname, `./icons/virtualremote.png`)
+    window = new BrowserWindow({
+       width: 290, 
+       height: 570, 
+       frame:false,
+       transparent: true,
+       x:1000,
+       y:100,
+       icon:iconPath,
+       webPreferences: {
+             nodeIntegration: true,
+             contextIsolation: false,
+             enableRemoteModule: true,    
+       }
    });
 
-   window.loadFile(path.join(__dirname, 'index.html'))
-   
-}
+   window.loadURL(url.format ({ 
+      pathname: path.join(__dirname, 'index.html'), 
+      protocol: 'file:', 
+   })) 
+
+  
+}  
+
+
 
 app.on('ready', () => {
   createWindow()
 });
 
 
+
+ //build 
+ //nvm use v14.18.1
+ //npm install electron-packager
+// > electron-packager .  --platform linux --arch x64 --out dist/
+//electron-installer-debian --src dist/RDK_Virtual_Remote-linux-x64/ --arch amd64 --config config.json
+// rdk-emulator-manager rdk-virtual-remote
+
+//npm install --save-dev electron-packager
+//npm install --save-dev electron-builder
+//npm install --save-dev electron-installer-debian
+//electron-installer-debian --src dist/remote-linux-x64/ --arch amd64 --config config.json
 

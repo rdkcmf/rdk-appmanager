@@ -1,0 +1,5 @@
+[
+    {"value":"UP","wait":200},
+    {"value":"RIGHT","wait":200},
+    {"value":"OK","wait":200}
+]

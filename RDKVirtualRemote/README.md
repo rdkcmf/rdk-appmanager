@@ -1,5 +1,6 @@
-
 # RDK-V Virtual Remote
+
+# Overview
 This application demonstrates the UI for the RDK-V Virtual Remote. The application starts with all the RCU keys present in physical RDK remote. After application launch, a RDK-V Virtual Remote screen is displayed which mainly contains virtual keys same as RCU keys present in physical rdk remote. A input text box will be displayed in bottom, above the RDK logo.
 
 Note: Few RCU keys are not implemented in physical RDK remote, same keys will not work in RDK-V Virtual Remote.  
@@ -43,27 +44,31 @@ Follow below steps to create installer package for linux
 
 # Use node version v14.18.1 or above
 
-$ nvm use v14.18.1 
+    $ nvm use v14.18.1 
 
 # Need to install electron-packager and electron-installer-debian globally if not installed in your PC
 
-$ sudo npm install -g electron-packager
-$ sudo npm install -g electron-installer-debian
+    $ sudo npm install -g electron-packager
+    $ sudo npm install -g electron-installer-debian
 
 # Run below commands to make deb file for linux installer
 
-$ electron-packager .  --platform linux --arch x64 --out dist --overwrite
-$ electron-installer-debian --src dist/rdkv-virtual-remote-linux-x64/ --arch amd64 --config config.json
+    $ electron-packager .  --platform linux --arch x64 --out dist --overwrite
+    $ electron-installer-debian --src dist/rdkv-virtual-remote-linux-x64/ --arch amd64 --config config.json
+# Features
 
-Installer package will be created and stored inside the dist folder.
-For the complete documentation on electronjs refer link: https://www.electronjs.org/.
+* Target Device IP Address Configuration
+- Developer has to configure the rpi device/emulator ip address, after device ip configuration virtual remote will be able to communicate with rpi/emulator.
+- On focus button (rcu key) will be highlighted.
 
-# Installation
+# Supported RCU keys
 
-- Find the installer package created inside the dist folder for the RDKV virtual remote: rdkv-virtual-remote-linux-x64.deb
-- Double click on installer deb package, default linux software install window will appear and progress bar will be displayed
-- On successful installation user/developer will be able to launch RDK-V Virtual Remote by selecting the RDK-V Virtual Remote icon from apps  
+- Currently following listed rcu keys are working UP/Down/OK /Home /Mute and Backsapce. 
 
+# Resources
 
+  For the complete documentation on electronjs refer link: 
+  * https://www.electronjs.org/.
 
-
+  For the complete documentation on RDK-V virtual remote, refer link: 
+  * https://wiki.rdkcentral.com/display/RDK/RDK-V+Virtual+Remote

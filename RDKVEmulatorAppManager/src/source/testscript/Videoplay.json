@@ -1,0 +1,9 @@
+[
+     
+    {"value":"DOWN","wait":2000},
+    {"value":"UP","wait":2000},
+    {"value":"RIGHT","wait":2000},
+    {"value":"RIGHT","wait":2000},
+    {"value":"LEFT","wait":2000},
+    {"value":"HOME","wait":2000}
+]

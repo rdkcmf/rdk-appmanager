@@ -1,0 +1,12 @@
+[
+    {"value":"RESET","wait":10000},    
+    {"value":"HOME","wait":200},    
+    {"value":"DOWN","wait":1700},
+    {"value":"DOWN","wait":1700},
+    {"value":"DOWN","wait":1700},
+    {"value":"UP","wait":1700},
+    {"value":"UP","wait":1700},
+    {"value":"UP","wait":1700},
+    {"value":"UP","wait":1700},
+    {"value":"HOME","wait":500}    
+]
