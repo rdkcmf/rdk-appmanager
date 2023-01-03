@@ -9,11 +9,16 @@ log()
 {
     echo "$(date '+%Y %b %d %H:%M:%S.%6N') [#$$]: ${FUNCNAME[1]}: $*" >> $LOGFILE
 }
+
+THUNDERSECURITY=`tr181 Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderSecurity.Enable 2>&1`
+log "Is THUNDERSECURITY enabled ?= '$THUNDERSECURITY'"
+TOKEN=`WPEFrameworkSecurityUtility | sed -r 's/[{:",}]/ /g' | awk '{print $2}'`
+
 srv_restart=0
 if [ $# -gt 0 ]; then
    if [[ $1 == "stop" ]]; then
-      curl -s -X POST -H "Content-Type: application/json"  'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "org.rdk.RDKShell.1.destroy", "params": {"callsign":"ResidentApp","type": "ResidentApp"}}' >>$LOGFILE 2>&1  
-      log "Stop called. Exiting gracefully" 
+      curl -s -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "org.rdk.RDKShell.1.destroy", "params": {"callsign":"ResidentApp","type": "ResidentApp"}}' >>$LOGFILE 2>&1  
+      log "Stop called. Exiting gracefully"
       exit 0
    fi
 fi
@@ -92,10 +97,8 @@ appurl=$offlineApp
 if [ -f  /tmp/route_available ] ; then
   appurl=$residentApp
 fi
-THUNDERSECURITY=`tr181 Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.ThunderSecurity.Enable 2>&1`
+
 log "Selected reference app is $appurl"
-log "Is THUNDERSECURITY enabled ?= '$THUNDERSECURITY'"
-TOKEN=`WPEFrameworkSecurityUtility | sed -r 's/[{:",}]/ /g' | awk '{print $2}'`
 
 #System plugin needs to be activated for properly showing the time in UI
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" 'http://127.0.0.1:9998/jsonrpc' -d '{"jsonrpc": "2.0","id": 4,"method": "Controller.1.activate", "params": { "callsign": "org.rdk.System" }}' ; echo
