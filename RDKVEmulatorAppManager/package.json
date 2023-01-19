@@ -9,14 +9,14 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "electron": "^15.3.0",
-        "electron-builder": "^22.13.1",
+        "electron": "^22.0.3",
+        "electron-builder": "^23.6.0",
         "electron-installer-debian": "^3.1.0",
         "electron-rebuild": "^3.2.7"
     },
     "dependencies": {
         "drivelist": "^9.2.4",
-        "electron-packager": "^15.5.2",
+        "electron-packager": "^17.1.1",
         "fs-extra": "^10.0.0",
         "sudo-prompt": "^9.2.1",
         "usb-detection": "^4.14.1"
